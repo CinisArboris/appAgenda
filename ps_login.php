@@ -11,7 +11,7 @@
     $db->Connect($dbserver, $dbuser, $dbpassword, $dbname);
     $rs = $db->Execute(
         "SELECT *
-        FROM agenda_persona
+        FROM e_persona
         WHERE per_cod='$user' AND per_pass='$password';"
     );
     $db->Close();

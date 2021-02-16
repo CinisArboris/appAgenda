@@ -12,5 +12,5 @@ $dbpassword	= 'grup006grup006';
 #BD NAME
 $dbname = 'db_'.$dbuser; 
 
-$path = 'https://www.tecnoweb.org.bo/inf513/grupo06sc/practica_4.1/eyver/appAgenda/';
+$path = 'https://www.tecnoweb.org.bo/inf513/grupo06sc/practica_4.3/eyver/appAgenda/';
 ?>

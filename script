@@ -1,0 +1,48 @@
+
+#conexion SSH
+conexion :: ssh grupo06sc@tecnoweb.org.bo
+password :: grup006grup006
+
+
+#conexion bd
+psql db_grupo06sc grupo06sc
+
+#listar tablas
+\dt
+
+#crear tabla
+drop table if exists e_persona;
+CREATE TABLE e_persona(
+	per_cod char(14) PRIMARY KEY,
+	per_nom char(150) NOT NULL,
+	per_appm char(150) NOT NULL,
+	per_prof char(100) NOT NULL,
+	per_telf char(17) NOT NULL,
+	per_cel char(17) NOT NULL,
+	per_email char(50) UNIQUE NOT NULL,
+	per_dir char(150) NOT NULL,
+	per_fnac date NOT NULL,
+	per_flug char(150) NOT NULL,
+	per_type int NOT NULL,
+	per_pass char(100) NOT NULL,
+	per_foto bytea NULL,
+	per_create timestamp NOT NULL,
+	per_update timestamp NOT NULL
+);
+
+INSERT INTO e_persona VALUES ('3885821', 'Erick', 'Ureña Inarras', 'Estudiante', '38858213', '770-09245', 'ericsauro@yahoo.com', 'Santos Dumont 5to anillo', '1971-04-22', 'Santa Cruz',1 ,'1234561', NULL, now(), now());
+INSERT INTO e_persona VALUES ('4012065', 'Josei', 'Colque Paulas', 'Estudiante', '33522210', '710-99366', 'josemanue@gmail.com', 'Av. 1ro de Mayo Cu #1520', '1972-03-13', 'Santa Cruz',1 ,'1234561', NULL, now(), now());
+INSERT INTO e_persona VALUES ('3924689', 'Evans', 'Balcazar Veiz', 'Estudiante', '33522310', '710-72687', 'evansbv11@gmail.com', 'Av. Humbertos S. R. #220', '1973-02-24', 'Puerto Sua',1 ,'6543211', NULL, now(), now());
+INSERT INTO e_persona VALUES ('7777777', 'Eyver', 'Vargas Medina', 'Estudiante', '58585858', '710-16688', 'eyver.evm@gmail.com', 'Grigóta entre 1-2 anillo', '1974-01-25', 'Puerto Sua',0 ,'7777777', NULL, now(), now());
+
+
+
+#consulta
+select email from paciente;
+
+
+
+
+
+
+

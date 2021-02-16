@@ -10,8 +10,15 @@ Listado de Amigos :
 	<a href="personas.php?opcion=1"> Nuevo</a>
 {/if}
 
-<table>
+		<style>
+			.center {
+  				margin-left: auto;
+  				margin-right: auto;
+			}
+		</style>
+		<table class="center">
 	<tr>
+		<td ><b>Foto</b></td>
 		<td ><b>C.I.</b></td>
 		<td ><b>Nombres Completo</b></td>
 		<td ><b>Mostrar</b></td>
@@ -19,9 +26,10 @@ Listado de Amigos :
 		<td ><b>Eliminar</b></td>
 	</tr>
 
-{section name=pos loop= $amigos}
+	{section name=pos loop = $amigos}
 
 	<tr>
+		<td >{$amigos[pos].per_foto}</td>
 		<td >{$amigos[pos].per_cod}</td>
 		<td >{$amigos[pos].per_appm} {$amigos[pos].per_nom}</td>
 		<td ><a href="personas.php?opcion=2&per_cod={$amigos[pos].per_cod}"> Mostrar</a></td>
